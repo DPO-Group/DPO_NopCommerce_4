@@ -1,6 +1,6 @@
 # DPO_NopCommerce_4
 
-## DPO Group NopCommerce plugin v1.0.0 for NopCommerce v4.40
+## DPO Group NopCommerce plugin v4.5.0 for NopCommerce v4.50
 
 This is the DPO Group plugin for NopCommerce. Please feel free to contact
 the [DPO Group support team](https://dpogroup.com/contact-us/) should you require any assistance.
@@ -8,7 +8,7 @@ the [DPO Group support team](https://dpogroup.com/contact-us/) should you requir
 ## Installation
 
 Please navigate to the [releases page](https://github.com/DPO-Group/DPO_NopCommerce_4/releases), download the
-latest release (v1.0.0) and unzip. You will then be able to follow the integration guide PDF which is included in the
+latest release (v4.5.0) and unzip. You will then be able to follow the integration guide PDF which is included in the
 zip.
 
 ## Collaboration

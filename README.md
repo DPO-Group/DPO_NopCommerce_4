@@ -1,9 +1,9 @@
 # DPO_NopCommerce_4
 
-## DPO Group NopCommerce plugin v4.5.0 for NopCommerce v4.50
+## DPO Pay NopCommerce plugin v4.5.0 for NopCommerce v4.50
 
-This is the DPO Group plugin for NopCommerce. Please feel free to contact
-the [DPO Group support team](https://dpogroup.com/contact-us/) should you require any assistance.
+This is the DPO Pay plugin for NopCommerce. Please feel free to contact
+the [DPO Pay support team](https://dpogroup.com/contact-us/) should you require any assistance.
 
 ## Installation
 

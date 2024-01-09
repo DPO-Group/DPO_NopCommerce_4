@@ -2,10 +2,10 @@
   "Group": "Payment methods",
   "FriendlyName": "Dpo",
   "SystemName": "Payments.Dpo",
-  "Version": "1.0.0",
-  "SupportedVersions": [ "4.40" ],
+  "Version": "4.6.0",
+  "SupportedVersions": [ "4.60" ],
   "Author": "App Inlet (Pty) Ltd",
   "DisplayOrder": 1,
   "FileName": "Nop.Plugin.Payments.Dpo.dll",
-  "Description": "This plugin allows payments using DPO"
+  "Description": "This plugin allows payments using DPO Pay"
 }

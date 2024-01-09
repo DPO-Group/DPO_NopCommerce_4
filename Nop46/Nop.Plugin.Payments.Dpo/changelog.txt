@@ -2,4 +2,4 @@
 Date	  : Version: Description
 =====================================
 
-2022-03-25: v1.0.0 : Initial release.
+2024-01-09: v4.6.0 : Change to .NET7 and support for NopCommerce 4.6.

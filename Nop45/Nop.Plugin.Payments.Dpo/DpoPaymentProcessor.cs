@@ -216,16 +216,21 @@ namespace Nop.Plugin.Payments.Dpo
                     var initiateResponse = await responseDpo.Content.ReadAsStringAsync();
                     await defaultLogger.InformationAsync("Initiate response: " + initiateResponse + " cnt=" + cnt);
                     var textReader = new StringReader(initiateResponse);
-                    var response = new XPathDocument(textReader);
-
-                    var navigator = response.CreateNavigator();
-                    result = navigator.SelectSingleNode("//Result").Value;
-
-                    if (result == "000")
+                    try
                     {
-                        transToken = navigator.SelectSingleNode("//TransToken").Value;
-                        initiated = true;
+                        var response = new XPathDocument(textReader);
+                        var navigator = response.CreateNavigator();
+                        result = navigator.SelectSingleNode("//Result").Value;
+                        if (result == "000")
+                        {
+                            transToken = navigator.SelectSingleNode("//TransToken").Value;
+                            initiated = true;
+                        }
                     }
+                    catch (Exception e)
+                    {
+                        await defaultLogger.ErrorAsync("Failed to CreateTransToken: " + e.Message);
+                    }                                      
 
 
                     cnt++;
@@ -249,7 +254,6 @@ namespace Nop.Plugin.Payments.Dpo
 
                         var response = _httpContextAccessor.HttpContext.Response;
                         response.ContentType = "text/html; charset=utf-8";
-                        response.Body.Flush();
                         response.Redirect(Url);
                     }
                     catch (Exception e)
@@ -447,9 +451,9 @@ namespace Nop.Plugin.Payments.Dpo
             //settings
             var settings = new DpoPaymentSettings
             {
-                CompanyToken = "9F416C11-127B-4DE2-AC7F-D5710E4C5E0A",
-                ServiceType = "3854",
-                UseSSL = false,
+                CompanyToken = "",
+                ServiceType = "",
+                UseSSL = true,
             };
             await _settingService.SaveSettingAsync(settings);
 
